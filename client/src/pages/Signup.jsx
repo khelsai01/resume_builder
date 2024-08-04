@@ -50,7 +50,7 @@ export const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8 bg-violet-300 rounded-se-full">
+    <div className="min-h-screen flex items-center justify-center py-6 px-4 sm:px-6 lg:px-8 bg-violet-300 rounded-se-full rounded-es-full">
       <div className="max-w-md w-full space-y-8 bg-[#e9fae9] p-10 rounded-ss-full shadow-2xl">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 colorMixBlue">
