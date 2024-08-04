@@ -20,7 +20,13 @@ const Dashboard = () => {
     const fetchResumes = async () => {
       try {
         const response = await axios.get(
-          "https://resume-builder-server-51je.onrender.com/resume/all"
+          "https://resume-builder-server-51je.onrender.com/resume/all",
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            }
+          }
         );
         console.log(response.data.resumes)
         setResumes(response.data.resumes);
@@ -44,7 +50,13 @@ const Dashboard = () => {
   const handleDeleteClick = async (resumeId) => {
     try {
       await axios.delete(
-        `https://resume-builder-server-51je.onrender.com/resume/${resumeId}`
+        `https://resume-builder-server-51je.onrender.com/resume/${resumeId}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          }
+        }
       );
       setResumes(resumes.filter((resume) => resume._id !== resumeId));
     } catch (error) {

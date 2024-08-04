@@ -6,6 +6,10 @@ const resumeSchema = new mongoose.Schema({
         email:{ type: String, required: true },
         phone: { type: String, required: true },
         // image:{ type: String, required: true }
+        address: { type: String, required: true },
+        linkedin: { type: String },
+        portfolio: { type: String },
+        
         
     },
     education: [{
@@ -16,11 +20,23 @@ const resumeSchema = new mongoose.Schema({
     experience: [{
         company: String,
         position: String,
-        start: Date,
-        end: Date,
+        startDate: Date,
+        endDate: Date,
         description: String
     }],
     skills: [String],
+    certifications: [{
+        name: String,
+        year: Date,
+        organization: String,
+        
+    }],
+    projects: [{
+        name: String,
+        description: String,
+        data: Date
+    }],
+    summary:""
 
 }, { versionKey: false });
 

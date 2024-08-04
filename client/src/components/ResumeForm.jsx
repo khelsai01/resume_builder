@@ -9,7 +9,9 @@ import { MdDeleteForever } from "react-icons/md";
 const ResumeForm = () => {
 
   const { id } = useSearchParams()
-  console.log(id);
+  // console.log(id);
+
+  const token = JSON.parse(localStorage.getItem("token")) || '';
 
   const [resume, setResume] = useState({
     personalInfo: {
@@ -40,7 +42,14 @@ const ResumeForm = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const res = axios.get(`https://resume-builder-server-51je.onrender.com/resume/${id}`);
+    const res = axios.get(`https://resume-builder-server-51je.onrender.com/resume/${id}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      }
+    );
     console.log(res.data.resume);
   
   }, [id])
@@ -102,7 +111,13 @@ const ResumeForm = () => {
     try {
      const res = await axios.post(
         "https://resume-builder-server-51je.onrender.com/resume/create",
-        resume
+       resume,
+       {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
+      }
       );
       console.log(res);
       toast.success("Resume saved successfully!");
