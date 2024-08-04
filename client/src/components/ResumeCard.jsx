@@ -7,8 +7,8 @@ import Tooltip from "./Tooltip";
 
 const ResumeCard = ({ resume, onClick, onEdit, onDelete }) => {
   return (
-    <div className="border p-4 bg-white rounded-lg shadow-md">
-      <h3 className="text-xl font-semibold text-gray-800">
+    <div className="border p-4 bg-white rounded-lg shadow-md flex flex-col gap-2">
+      <h3 className="text-xl font-semibold text-violet-700">
         {resume.personalInfo?.name || "Name Not Available"}
       </h3>
       <p className="text-gray-600">
@@ -19,12 +19,12 @@ const ResumeCard = ({ resume, onClick, onEdit, onDelete }) => {
       </p>
       <div className="flex justify-between">
         <Tooltip tooltipText="View Resume">
-          <EyeIcon onClick={onClick}  className="text-gray-700 hover:scale-110 transition duration-500 ease-in-out"/>
+          <EyeIcon onClick={onClick}  className="text-green-500 hover:scale-110 transition duration-500 ease-in-out"/>
         </Tooltip>
 
         <Tooltip tooltipText="Edit Resume">
           <FaEdit
-            onClick={() => onEdit(resume)}
+            onClick={() => onEdit(resume._id)}
             className=" text-2xl text-blue-500 hover:text-green-700 transition duration-300"
           />
         </Tooltip>

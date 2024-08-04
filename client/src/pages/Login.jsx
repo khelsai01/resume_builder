@@ -27,10 +27,10 @@ const Login = () => {
           body: JSON.stringify(formData),
         }
       );
-
+      console.log(response);
       if (response.ok) {
         const data = await response.json();
-        if (data.access_token) {
+        if (data.token) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("userid", data.user._id);
           localStorage.setItem("username", data.user.username);

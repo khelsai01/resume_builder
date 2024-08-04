@@ -23,6 +23,7 @@ export const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    console.log(formData)
     try {
       const response = await fetch(
         "https://resume-builder-server-51je.onrender.com/user/register",
@@ -35,7 +36,7 @@ export const Signup = () => {
 
       if (response.ok) {
         toast.success("Registration successful");
-        navigate("/");
+        navigate("/login");
       } else {
         const errorData = await response.json();
         toast.error(`Registration failed: ${errorData.message}`);

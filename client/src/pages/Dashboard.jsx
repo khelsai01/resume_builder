@@ -6,6 +6,7 @@ import ResumeDetail from "../components/ResumeDetail";
 import { PlusCircleIcon } from "lucide-react";
 import Tooltip from "../components/Tooltip";
 import NoLogin from "../components/NoLogin";
+import ResumeEditForm from "./ResumeEdit";
 
 const Dashboard = () => {
   const [resumes, setResumes] = useState([]);
@@ -13,7 +14,7 @@ const Dashboard = () => {
   const [showDetail, setShowDetail] = useState(false);
   const navigate = useNavigate();
 
-  const token = JSON.parse(localStorage.getItem("token")) || '';
+  const token = localStorage.getItem("token") || '';
 
 
   useEffect(() => {
@@ -43,8 +44,8 @@ const Dashboard = () => {
     setShowDetail(true);
   };
 
-  const handleEditClick = (resume) => {
-    navigate(`/edit/${resume._id}`);
+  const handleEditClick = (id) => {
+    navigate(`/resume/${id}`);
   };
 
   const handleDeleteClick = async (resumeId) => {

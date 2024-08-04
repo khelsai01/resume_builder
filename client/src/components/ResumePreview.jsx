@@ -29,7 +29,7 @@ const ResumePreview = ({ resume }) => {
 
       <div
         ref={resumeRef}
-        className="bg-white p-8 shadow-lg rounded-lg w-full sm:w-[650px]" // Adjust width for mobile and desktop
+        className="bg-white p-8 shadow-lg rounded-lg w-full sm:w-[650px]"
       >
         <h1 className="text-xl font-bold mb-2">{resume.personalInfo.name}</h1>
         <p className="text-sm mb-1">
@@ -51,24 +51,24 @@ const ResumePreview = ({ resume }) => {
         <p className="text-sm mb-4">{resume.summary}</p>
 
         <h2 className="text-lg font-bold mt-4 mb-2">Work Experience</h2>
-        {resume.workExperience.map((exp, index) => (
+        {resume?.workExperience?.map((exp, index) => (
           <div key={index} className="mb-4">
             <h3 className="text-base font-bold">
               {exp.position} at {exp.company}
             </h3>
             <p className="text-sm">
-              {exp.startDate} - {exp.endDate}
+              {exp.startDate} to {exp.endDate}
             </p>
             <p className="text-sm">{exp.description}</p>
           </div>
         ))}
 
         <h2 className="text-lg font-bold mt-4 mb-2">Education</h2>
-        {resume.education.map((edu, index) => (
+        {resume?.education?.map((edu, index) => (
           <div key={index} className="mb-4">
-            <h3 className="text-base font-bold">{edu.degree}</h3>
+            <h3 className="text-base font-bold">Course : <span className="ml-2 text-gray-600">{edu.degree}</span> </h3>
             <p className="text-sm">
-              {edu.institution}, {edu.startDate} - {edu.endDate}
+              {edu.institution} , {edu.year}
             </p>
           </div>
         ))}
@@ -83,17 +83,17 @@ const ResumePreview = ({ resume }) => {
         </ul>
 
         <h2 className="text-lg font-bold mt-4 mb-2">Certifications</h2>
-        {resume.certifications.map((cert, index) => (
+        {resume?.certifications?.map((cert, index) => (
           <div key={index} className="mb-4">
             <h3 className="text-base font-bold">{cert.name}</h3>
             <p className="text-sm">
-              {cert.organization}, {cert.date}
+              {cert.organization}, {cert.year}
             </p>
           </div>
         ))}
 
         <h2 className="text-lg font-bold mt-4 mb-2">Projects</h2>
-        {resume.projects.map((project, index) => (
+        {resume?.projects?.map((project, index) => (
           <div key={index} className="mb-4">
             <h3 className="text-base font-bold">{project.name}</h3>
             <p className="text-sm">{project.date}</p>

@@ -6,7 +6,7 @@ const NoLogin = () => {
   return (
     <div className='relative'>
           <div className='absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 w-[90%] sm:w-1/2 sm:h-[50vh] sm:bg-slate-300 p-4 rounded-ss-full'>
-              <div className='relative'>
+              <div className='relative z-20'>
                   <h1 className='text-3xl md:text-5xl font-bold text-center p-4 colorMixBlue hover:scale-105 transition duration-500 ease-in-out'>Welcome to Resume Builder Application</h1>
                   <p className='text-gray-500 text-md md:text-lg text-start hover:text-orange-300 transition duration-500 ease-in-out '>This Appliction is help to you for build your <span className='text-orange-600 uppercase mx-2 underline '>first Resume</span> for getting your dream job in this market.</p>
                   <p className='text-gray-500 text-start'><Link to={'/signup'} className='text-xl text-blue-800 hover:text-blue-600 transition duration-400 ease-in-out cursor-pointer'>Click here!</Link> To get your Resume.</p>

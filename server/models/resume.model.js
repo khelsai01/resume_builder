@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const resumeSchema = new mongoose.Schema({
+    userId:String,
     personalInfo: {
         name: { type: String, required: true },
         email: { type: String, required: true },
