@@ -3,40 +3,36 @@ const mongoose = require('mongoose');
 const resumeSchema = new mongoose.Schema({
     personalInfo: {
         name: { type: String, required: true },
-        email:{ type: String, required: true },
+        email: { type: String, required: true },
         phone: { type: String, required: true },
-        // image:{ type: String, required: true }
         address: { type: String, required: true },
         linkedin: { type: String },
         portfolio: { type: String },
-        
-        
     },
     education: [{
         institution: { type: String, required: true },
         degree: { type: String, required: true },
-        year:{ type: String, required: true },
+        year: { type: String, required: true },
     }],
     experience: [{
-        company: String,
-        position: String,
-        startDate: Date,
-        endDate: Date,
-        description: String
+        company: { type: String },
+        position: { type: String },
+        startDate: { type: String },
+        endDate: { type: String },
+        description: { type: String }
     }],
-    skills: [String],
+    skills: [{ type: String }],
     certifications: [{
-        name: String,
-        year: Date,
-        organization: String,
-        
+        name: { type: String },
+        year: { type: String },
+        organization: { type: String },
     }],
     projects: [{
-        name: String,
-        description: String,
-        data: Date
+        name: { type: String },
+        description: { type: String },
+        date: { type: String } 
     }],
-    summary:""
+    summary: { type: String } 
 
 }, { versionKey: false });
 

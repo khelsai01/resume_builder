@@ -9,7 +9,7 @@ const userRouter = express.Router();
 const secreteKey = process.env.SECRETEKEY || "assignment";
 
 userRouter.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { username, email, password } = req.body;
   try {
     const oldUser = await UserModel.findOne({ email });
 
@@ -20,7 +20,7 @@ userRouter.post("/register", async (req, res) => {
     }
 
     const hashPass = bcrypt.hashSync(password, 10);
-    const user = new UserModel({ name, email, password: hashPass });
+    const user = new UserModel({ username, email, password: hashPass });
     await user.save();
     return res
       .status(200)

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.colorMix {
+    background: #ff00cc; 
+        background: -webkit-linear-gradient(
+          to right,
+          #333399,
+          #ff00cc
+        ); 
+        background: linear-gradient(
+          to right,
+          #333399,
+          #ff00cc
+        );
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+}
+
+.colorMixBlue {
+    background: rgb(118,110,242);
+        background: -webkit-linear-gradient(
+          to right,
+          #333399,
+          #1900ff
+        ); 
+       
+        background: linear-gradient(90deg, rgba(118,110,242,1) 1%, rgba(44,61,171,1) 43%, rgba(9,64,121,1) 100%);
+        background-size: cover;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+}
