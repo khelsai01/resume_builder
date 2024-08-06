@@ -15,6 +15,7 @@
 ## Images of the application
 
 ### Landing page
+
 <br/>
 <br/>
 
@@ -27,12 +28,16 @@
 <br/>
 
 ### Login and Signup page
+
 <br/>
 <br/>
+
 `The user is visit first time in application so they need to registering them self with our signUp page with usernam email and password.`
 <br/>
 <br/>
+
 **Signup page**
+
 <br/>
 <br/>
 
@@ -51,10 +56,14 @@
 ![login](https://github.com/user-attachments/assets/4551b3ca-5359-4b24-8bc8-f55b9f8f0871)
 <br/>
 <br/>
+
 ### Resume create page
+
 <br/>
 <br/>
+
 **Resume dashboard page**
+
 <br/>
 <br/>
 
@@ -83,6 +92,7 @@
 <br/>
 
 ## Resume Preview page 
+
 <br/>
 <br/>
 
