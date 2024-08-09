@@ -51,10 +51,10 @@ const ResumePreview = ({ resume }) => {
         <p className="text-sm mb-4">{resume.summary}</p>
 
         <h2 className="text-lg font-bold mt-4 mb-2">Work Experience</h2>
-        {resume?.workExperience?.map((exp, index) => (
+        {resume?.experience?.map((exp, index) => (
           <div key={index} className="mb-4">
             <h3 className="text-base font-bold">
-              {exp.position} at {exp.company}
+            <span className="uppercase">{exp.position}</span> at {exp.company}
             </h3>
             <p className="text-sm">
               {exp.startDate} to {exp.endDate}

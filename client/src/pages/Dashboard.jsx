@@ -6,7 +6,7 @@ import ResumeDetail from "../components/ResumeDetail";
 import { PlusCircleIcon } from "lucide-react";
 import Tooltip from "../components/Tooltip";
 import NoLogin from "../components/NoLogin";
-import ResumeEditForm from "./ResumeEdit";
+
 
 const Dashboard = () => {
   const [resumes, setResumes] = useState([]);
@@ -72,7 +72,7 @@ const Dashboard = () => {
         <div className="flex justify-between mb-6">
           <Link to={"/resume"}>
             <button
-              // onClick={() => navigate("/resume")}
+
               className="hidden sm:block px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
             >
               Create Resume

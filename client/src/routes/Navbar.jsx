@@ -12,7 +12,7 @@ export const Navbar = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userid");
     localStorage.removeItem("username");
-    navigate("/login");
+    navigate("/");
     toast.success("Logout successfully");
   };
 

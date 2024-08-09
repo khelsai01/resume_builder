@@ -35,6 +35,25 @@
         color:transparent;
 }
 
+.column-div{
+  background:linear-gradient(45deg, #17ada1, #47a169, #cb14bf, #f4e94f);
+  background-size: 600% 600%;
+  padding: 25px;
+  animation: colors 6s infinite ease-in-out;
+}
+
+@keyframes colors {
+  0%{
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;
