@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaRegLightbulb } from "react-icons/fa";
-import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router-dom";
 import { MdDeleteForever } from "react-icons/md";
 import ResumePreview from "../components/ResumePreview";
@@ -229,7 +228,7 @@ const ResumeEditForm = () => {
 
         <button
           type="button"
-          onClick={handleGenerateSuggestions}
+{/*           onClick={handleGenerateSuggestions} */}
           className="text-white bg-violet-500 p-2 rounded flex items-center gap-2 mb-4  hover:text-violet-500 hover:bg-white hover:border-violet-400 hover:border-2 duration-500"
         >
           <FaRegLightbulb /> Generate Suggestions
